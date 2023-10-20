@@ -5,32 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hervé Henaff</title>
         <link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body>
 
-        <!-- <div id="header-banner">
-            <a href="/" rel="home">
-                <img
-                    src="assets/img/header.jpg"
-                    width="1000" height="60"
-                    alt="header">
-            </a>
-        </div> -->
-
-        <div class="appbar">
+        <div id="appbar">
             <a href="#top">Hervé Henaff</a>
-            <div class="appbar-menu">
-                <a href="#cours-particuliers">Cours particuliers</a>
-                <a href="#photographie">Photographie</a>
-                <a href="#parcours-pro">Présentation</a>
-                <a href="#">Horaires</a>
-                <a href="#">Tarifs</a>
-                <a href="#">Fiscalité</a>
-                <a href="#">Contact</a>
+            <div id="appbar-menu">
+                <a id="appbar-menu-icon" onclick="onMenuIconClick()">
+                    <img src="assets/img/menu.svg" alt="menu" width="24px" />
+                </a>
+                <a href="#cours-particuliers" onclick="onMenuItemClick()">Cours
+                    particuliers</a>
+                <a href="#photographie" onclick="onMenuItemClick()">Photographie</a>
+                <a href="#parcours-pro" onclick="onMenuItemClick()">Présentation</a>
+                <a href="#horaires" onclick="onMenuItemClick()">Horaires</a>
+                <a href="#tarifs" onclick="onMenuItemClick()">Tarifs</a>
+                <a href="#fiscal" onclick="onMenuItemClick()">Fiscalité</a>
+                <a href="#contact" onclick="onMenuItemClick()">Contact</a>
             </div>
         </div>
 
-        <div class="content">
+        <div id="content">
 
             <div style="text-align: center;">
                 <h1>Hervé Henaff</h1>
@@ -40,7 +36,7 @@
                 </cite>
             </div>
 
-            <div id="cours-particuliers" class="media">
+            <div id="cours-particuliers" class="content-with-image">
                 <div>
                     <h2>Cours particuliers</h2>
                     <p>
@@ -86,13 +82,12 @@
                         confiance en lui, devenir autonome, et abordera les
                         contrôles (et le bac !) avec sérénité.
                         Et c’est bien là la finalité des cours à domicile.
-
                     </p>
                 </div>
                 <img src="assets/img/Learning-bro.svg" alt="Learning-bro" />
             </div>
 
-            <div id="photographie" class="media">
+            <div id="photographie" class="content-with-image">
                 <img src="assets/img/Focus-rafiki.svg" alt="Focus-rafiki" />
                 <div>
                     <h2>Photographie</h2>
@@ -107,29 +102,31 @@
                         exemples de photos de sport.
                         Je pratique moi même la moto en compétition, licencié
                         FFM au club de Trial de Bourbriac.
+
+                        <div id="photographie--images-grid" class="images-grid">
+                        </div>
                     </p>
                 </div>
             </div>
 
-            <div id="parcours-pro" class="media">
+            <div id="parcours-pro" class="content-with-image">
                 <div>
                     <h2>Mon parcours professionnel</h2>
                     <p>
                         Ingénieur de l’Ecole des Mines, j’exerce une activité
                         professionnelle d’enseignant à domicile en mathématiques
                         et physique-chimie.
-                    </p>
-                    <p>
+
                         J’ai donné mes premiers cours quand j’avais 12-13 ans.
                         J’apprenais au fils du quincaillier à compter avec des
                         batons. En terminale je donnais déjà des cours à des
-                        élèves de première.<br />
+                        élèves de première.
                         Au cours de ma carrière professionnelle d’ingénieur en
                         systèmes d’information, j’ai eu plusieurs fois
                         l’occasion d’utiliser mes connaissances scientifiques
                         dans le cadre de projets innovants et de transmettre du
                         savoir et des techniques dans le cadre de missions de
-                        conseil.<br />
+                        conseil.
                         Exemples : en physique et optoélectronique, les lasers
                         continus à haute énergie pour le secteur militaire, en
                         math, les réseaux maillés, pour EDF Paris, pour les
@@ -138,26 +135,22 @@
                         type big data, démarrage de la branche Asie de Carrefour
                         à HongKong, faisant intervenir dans mon équipe par
                         exemple des mathématiciens du niveau doctorat.
-                    </p>
-                    <p>
+
                         Je propose depuis maintenant sept ans des cours
                         particuliers à temps plein dans les Cotes-d’Armor.
                         J’interviens auprès de plus d’une vingtaine d’élèves par
                         an principalement ceux des Lycées de Saint-Brieuc et
                         Lamballe de la section S et ES.
-                    </p>
-                    <p>
+
                         J’aide à la préparation de concours post bac (Sesame,
                         Acces), dans le supérieur (BTS, DUT, prépa Economique et
                         Commerciale …) ainsi que pour des adultes (préparation
                         au CRPE, à des concours administratifs, …).
-                    </p>
-                    <p>
+
                         Un point important : je ne suis pas retraité, les cours
                         particuliers de mathématiques et de physique-chimie sont
                         mon unique activité professionnelle.
-                    </p>
-                    <p>
+
                         Pour comparer avec d’autres prestataires, les cours
                         particuliers ne sont pour moi ni un hobby, ni un
                         passe-temps, ni un complément de revenu, ni une activité
@@ -167,20 +160,17 @@
                         a pas de grand écart entre un discours commercial et sa
                         réalité. Ce que l’on peut trouver dans des organismes
                         industriels de cours particuliers.
-                    </p>
-                    <p>
+
                         Les cours sont dispensés exclusivement à votre domicile.
                         Mon entreprise est déclarée « services à la personne » à
                         la préfecture. Je rend des comptes à l’administration
                         fiscale. Elle ouvre en échange le droit aux familles
                         d’une déduction-crédit d’impôt de 50% du cout total.
-                    </p>
-                    <p>
+
                         En cas de demande de soutien régulier, je garantis ma
                         présence aux dates et heures fixées – sauf, bien
                         évidemment, en cas de force majeure.
-                    </p>
-                    <p>
+
                         J’attends pour ma part que cet engagement soit
                         réciproque. Par conséquent, les cours annulés moins de
                         48h avant l’horaire réservé sont dûs.
@@ -192,6 +182,140 @@
                 <img src="assets/img/Resume-bro.svg"
                     alt="Resume-bro">
             </div>
+
+            <div id="horaires" class="content-with-image">
+                <img src="assets/img/Schedule-amico.svg" alt="Schedule-amico" />
+                <div>
+                    <h2>Horaires</h2>
+                    <p>
+                        Du lundi au samedi. Les horaires sont à définir ensemble
+                        lors du premier rendez vous.
+                        Possibilités de cours pendant les vacances scolaires et
+                        jours fériés.
+                    </p>
+                </div>
+            </div>
+
+            <div id="tarifs" class="content-with-image">
+                <div>
+                    <h2>Tarifs</h2>
+                    <p>
+                        À la différence des nombreux organismes qui proposent
+                        des cours particuliers de mathématiques et de
+                        physique-chimie, il n’est compté ni frais d’inscription
+                        , ni frais de bilan, ni abonnement mensuel, pas de
+                        paiement d’avance, pas d’engagement financier sur un
+                        forfait ni sur une durée : vous êtes libre d’arrêter les
+                        cours à tout moment. Vous ne réglez que les heures
+                        effectuées.
+
+                        Le tarif de base est facturé 44 euros de l’heure qui
+                        vous revient à 22 euros net de l’heure après réduction
+                        ou crédit d’impôts.
+                        Pour les élèves du niveau post-bac, j’étudie les
+                        possibilités au cas par cas. Par exemple pour un niveau
+                        DUT ou prépa école de commerce l’heure est facturée 60
+                        euros soit 30 euros net.
+
+                        Je privilégie les élèves proches de Saint Brieuc mais je
+                        peux me déplacer dans tout le département (par exemple
+                        Saint Quay Portrieux / Cap Fréhel / Lamballe / Quintin).
+                        Dans certains cas d’horaires particuliers et/ou de
+                        distances il faudra ajouter des frais de déplacement.
+
+                        Afin d’éviter une préparation inutile de cours et
+                        bloquer un créneau horaire pour rien, les demandes
+                        d’annulation devront me parvenir au plus tard 48h avant
+                        la séance.
+                        Sinon, en cas d’annulation tardive, le coût de la séance
+                        est dû.
+
+                        Vous n’avez ni à déclarer ni à payer de charge sociale
+                        ou fiscale en plus. Tout est compris.
+                        Je délivre une attestation fiscale en janvier.
+                    </p>
+                </div>
+                <img src="assets/img/Manage money-bro.svg"
+                    alt="Manage money-bro" />
+            </div>
+
+            <div id="fiscal" class="content-with-image">
+                <img src="assets/img/Agreement-bro.svg" alt="Agreement-bro" />
+                <div>
+                    <h2>Fiscalité</h2>
+                    <p>
+                        Les avantages fiscaux : Réduction ou crédit d’impôts
+                        L’avantage fiscal prend la forme d’une réduction ou d’un
+                        crédit d’impôts sur le revenu égal à 50% des dépenses
+                        engagées pour des prestations de services à la personne
+                        dans la limite de 12 000€ par an.
+                        Des majorations du plafond annuel de dépenses (jusqu’à
+                        20 000€ maximum) peuvent intervenir en fonction du
+                        nombre d’enfants à charge, de la présence d’enfants
+                        handicapés, d’ascendants vivant au domicile du
+                        déclarant… (article 199 sexdecies du code général des
+                        impôts).
+
+                        Ce plafond est applicable pour toutes les activités de
+                        services à la personne, sauf pour :
+
+                        le petit jardinage à domicile : plafond limité à 5 000
+                        €,
+                        l’assistance informatique et internet : plafond limité à
+                        3 000 €,
+                        le petit bricolage : plafond limité à 500 € (une
+                        intervention ne peut dépasser 2 heures).
+                        Selon la situation du particulier, l’avantage fiscal
+                        prend la forme d’un crédit ou d’une réduction d’impôt.
+
+                        Prélèvements à la source et crédit d’impôt à partir de
+                        janvier 2019
+                        Si vous devez déclarer du service à la personne pour la
+                        première fois à compter du 1er janvier 2018, ces
+                        dépenses feront l’objet d’un versement complet du crédit
+                        d’impôt à l’été 2019.
+                        voir pour plus d’information le site economie.gouv
+
+                        Brochures 2019 – Comment remplir sa feuille d’impôt.
+                        Le formulaire qui vous concerne est le « formulaire
+                        n°2042 RICI ». La case à remplir est la 7DB.
+
+                        Informations officielles sur les SAP – Services A la
+                        Personne:
+                        Obligations des prestataires des SAP sur le site de
+                        l’INC
+                        Portail du CEDEF de l’Economie et Des Finances
+                        Site officiel des services à la personne
+                    </p>
+                </div>
+            </div>
+
+            <div id="contact" class="content-with-image">
+                <div>
+                    <h2>Contact</h2>
+                    <p>
+                        Par téléphone
+                        Portable : imagetel
+
+                        Par courriel
+                        Adresse de contact :
+
+                        Coordonnées
+                        11 Bis Rue Roger Collin
+                        22590 PORDIC
+                        Entreprise de Services à la Personne SAP n° 389866278
+                        Siret 389 866 278 00051
+
+                        Site officiel des services à la personne
+                    </p>
+                </div>
+                <img src="assets/img/Contact us-bro.svg" alt="Contact us-bro" />
+            </div>
+
+            <a href="https://storyset.com/business" target="_blank"
+                style="font-style: italic;">
+                Business illustrations by Storyset
+            </a>
 
         </div>
     </body>
