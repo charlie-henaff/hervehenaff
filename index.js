@@ -8,11 +8,11 @@ function onMenuIconClick() {
 
 function onMenuItemClick() {
     onMenuIconClick();
+    
     return true;
 }
 
 function loadImageGrid(id) {
-    console.log(id);
     const folder = 'media/img/';
 
     fetch(folder)
